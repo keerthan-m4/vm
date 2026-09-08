@@ -1,5 +1,4 @@
-const API = "https://virtual-mouse-backend-1qfe.onrender.com";
-
+const API = "http://127.0.0.1:5000";
 async function startMouse() {
     try {
         const response = await fetch(`${API}/start`, {
