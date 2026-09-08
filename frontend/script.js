@@ -1,14 +1,12 @@
 const API = "http://127.0.0.1:5000";
+
 async function startMouse() {
     try {
-        const response = await fetch(`${API}/start`, {
+        await fetch(`${API}/start`, {
             method: "POST"
         });
 
-        const data = await response.json();
-
-        document.getElementById("status").innerText = "Running 🟢";
-
+        checkStatus();
     } catch (error) {
         document.getElementById("status").innerText =
             "Python Agent Offline 🔴";
@@ -17,14 +15,11 @@ async function startMouse() {
 
 async function stopMouse() {
     try {
-        const response = await fetch(`${API}/stop`, {
+        await fetch(`${API}/stop`, {
             method: "POST"
         });
 
-        const data = await response.json();
-
-        document.getElementById("status").innerText = "Stopped 🔴";
-
+        checkStatus();
     } catch (error) {
         document.getElementById("status").innerText =
             "Python Agent Offline 🔴";
