@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Mouse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Virtual Mouse</h1>
+
+        <p>Control your laptop using hand gestures and eye blinks.</p>
+
+        <div class="status">
+            Status:
+            <span id="status">Checking...</span>
+        </div>
+
+        <button onclick="startMouse()">Start Virtual Mouse</button>
+
+        <button onclick="stopMouse()">Stop Virtual Mouse</button>
+
+        <div class="controls">
+
+            <h2>Controls</h2>
+
+            <p>☝️ Index finger → Move cursor</p>
+            <p>😉 Double blink → Mouse click</p>
+            <p>🖕 Middle finger → Exit</p>
+            <p>ESC → Exit</p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

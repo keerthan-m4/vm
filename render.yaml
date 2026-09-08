@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: virtual-mouse-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn backend.server:app
